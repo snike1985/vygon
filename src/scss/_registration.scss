@@ -1,0 +1,48 @@
+.registration {
+  position: relative;
+  margin-bottom: 40px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    min-height: 287px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    line-height: 1;
+    text-align: center;
+
+    p {
+      width: 50%;
+      padding: 75px;
+    }
+  }
+
+  .btn {
+    @include absoluteCenterX();
+    bottom: -20px;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .registration {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .registration {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .registration {
+
+  }
+}
+@media (min-width: $desktop) {
+  .registration {
+
+  }
+}
+

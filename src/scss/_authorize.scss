@@ -1,0 +1,53 @@
+.authorize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #9ba7b2;
+
+  a,
+  a:visited {
+    margin: 0 16px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    line-height: 1.608;
+    border-bottom: 1px solid transparent;
+    transition: border .3s ease-in-out;
+
+    &:first-child {
+      position: relative;
+
+      &:after {
+        @include absoluteCenterY();
+        left: calc(100% + 15px);
+        width: 1px;
+        height: 20px;
+        background-color: #fff;
+        content: '';
+      }
+    }
+
+    &:hover { border-bottom-color: inherit }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .authorize {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .authorize {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .authorize {
+
+  }
+}
+@media (min-width: $desktop) {
+  .authorize {
+
+  }
+}
+

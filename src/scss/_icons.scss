@@ -1,0 +1,48 @@
+.icons {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  line-height: 1.251;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__item {
+    width: calc(100%/3);
+    padding: 20px;
+    font-weight: 900;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 20px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .icons {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .icons {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .icons {
+
+  }
+}
+@media (min-width: $desktop) {
+  .icons {
+
+  }
+}
+

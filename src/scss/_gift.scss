@@ -1,0 +1,56 @@
+.gift {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px;
+  font-weight: 900;
+
+  &__count {
+    @include absoluteCenterY();
+    width: 100%;
+    font-size: 290px;
+    color: rgba(0, 125, 197, 0.349);
+    line-height: 1.252;
+    text-align: center;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    padding: 10px;
+    z-index: 2;
+    font-size: 29px;
+    color: rgb(0, 0, 0);
+    line-height: 1.266;
+    text-align: center;
+    border: 1px solid #000;
+    border-width: 1px 0;
+
+    span { display: block }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .gift {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .gift {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .gift {
+
+  }
+}
+@media (min-width: $desktop) {
+  .gift {
+
+  }
+}
+

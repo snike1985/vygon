@@ -1,0 +1,114 @@
+.timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 54px;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 91px;
+    font-size: 58px;
+    letter-spacing: -.5px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1.137;
+    font-weight: 900;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: -5px;
+
+      &:first-child {
+
+        &:after {
+          display: block;
+          width: 271px;
+          height: 5px;
+          margin: 0 0 15px 25px;
+          background-color: #5481ba;
+          content: '';
+        }
+      }
+      &:last-child {
+        position: relative;
+        align-items: flex-start;
+        left: -111px;
+
+        &:before {
+          display: block;
+          width: 348px;
+          height: 5px;
+          margin: 15px 25px 0 0;
+          background-color: #5481ba;
+          content: '';
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 30%;
+      font-size: 20px;
+      color: rgb(0, 0, 0);
+      line-height: 1;
+      text-align: center;
+
+      h2 {
+        min-width: 180px;
+        padding: 3px 20px;
+        margin-bottom: 21px;
+        background-color: #5481ba;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 1.407;
+        text-align: center;
+        font-weight: 900;
+      }
+
+      time {
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        line-height: 1.333;
+      }
+
+      strong {
+        font-weight: 900;
+      }
+
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .timeline {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .timeline {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .timeline {
+
+  }
+}
+@media (min-width: $desktop) {
+  .timeline {
+
+  }
+}
+

@@ -1,0 +1,25 @@
+.btn,
+a.btn,
+button.btn {
+  display: inline-block;
+  min-width: 126px;
+  padding: 14px 28px;
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  background-color: #f15e22;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.231;
+  border-radius: 4px;
+  text-align: center;
+  transition: background .3s ease-in-out;
+
+  &:hover,
+  &.active {
+    background-color: #467cc0;
+  }
+
+  &:active {
+    background-color: #394e84;
+  }
+}
