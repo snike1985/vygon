@@ -5,35 +5,35 @@
 
   &__wrap {
     position: relative;
-    max-width: 1015px;
-    height: 791px;
+    max-width: 922px;
+    min-height: calc(100vh - 66px);
     margin: 0 auto;
-    padding: 47px 48px;
+    padding: 40px 25px;
 
     > p {
-      margin-bottom: 11px;
-      font-size: 23px;
+      margin-bottom: 5px;
+      font-size: 18px;
       color: rgb(255, 254, 254);
       line-height: 1.229;
     }
 
     > time {
       display: block;
-      margin-bottom: 51px;
-      font-size: 34px;
+      margin-bottom: 30px;
+      font-size: 28px;
       color: rgb(255, 255, 255);
       font-weight: 700;
       line-height: 0.696;
     }
 
     .logo {
-      margin-bottom: 43px;
+      margin-bottom: 25px;
     }
   }
 
   &__title {
-    margin-bottom: 26px;
-    font-size: 18px;
+    margin-bottom: 18px;
+    font-size: 14px;
     letter-spacing: 3.5px;
     font-weight: 400;
     color: rgb(0, 0, 1);
@@ -44,8 +44,8 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 13px 0;
-      font-size: 75px;
+      padding: 8px 0;
+      font-size: 38px;
       color: rgb(0, 0, 0);
       line-height: 1;
       text-align: left;
@@ -58,9 +58,9 @@
     }
 
     &-bg {
-      padding: 4px 14px;
-      margin-top: 7px;
-      font-size: 31px;
+      padding: 2px 10px;
+      margin-top: 5px;
+      font-size: 22px;
       color: #fff;
       line-height: 1;
       font-weight: 700;
@@ -70,60 +70,38 @@
   }
 
   &__info {
-    font-size: 18px;
+    font-size: 14px;
     color: rgb(0, 0, 0);
     line-height: 1.333;
   }
 
   &__gift {
-    margin-left: -48px;
-    padding: 16px 63% 14px 43px;
-    font-size: 20px;
+    padding: 8px;
+    font-size: 16px;
     color: rgb(0, 0, 0);
     line-height: 1.48;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 20px 51px 0 rgba(8, 8, 8, 0.34);
+    box-shadow: 0 15px 35px 0 rgba(8, 8, 8, 0.34);
 
     strong {
       display: block;
-      font-size: 53px;
-      padding: 17px 0;
+      font-size: 30px;
+      padding: 10px 0;
       color: rgb(0, 0, 0);
       line-height: 0.558;
-      text-align: left;
       font-weight: 900;
 
       span {
-        margin-left: -5px;
         letter-spacing: -.3px;
-        font-size: 40px;
+        font-size: 24px;
       }
     }
   }
 
   &__image {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    pointer-events: none;
-
-    img {
-
-    }
-  }
-
-  &_revert {
-
-    .hero__image {
-      right: auto;
-      left: 0;
-    }
-
-    .hero__wrap {
-      padding-left: 500px;
-    }
+    display: none;
   }
 }
 @media (min-width: $phone-landscape) {
@@ -134,11 +112,99 @@
 @media (min-width: $tablet-portrait) {
   .hero {
 
+    &__wrap {
+      min-height: 0;
+    }
   }
 }
 @media (min-width: $tablet-landscape) {
   .hero {
 
+    &__wrap {
+      height: 791px;
+      padding: 47px 48px;
+
+      > p {
+        margin-bottom: 11px;
+        font-size: 23px;
+      }
+
+      > time {
+        margin-bottom: 51px;
+        font-size: 34px;
+      }
+
+      .logo {
+        margin-bottom: 43px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 26px;
+      font-size: 18px;
+
+      > span {
+        padding: 13px 0;
+        font-size: 75px;
+        text-align: left;
+      }
+
+      &-bg {
+        padding: 4px 14px;
+        margin-top: 7px;
+        font-size: 31px;
+      }
+    }
+
+    &__info {
+      font-size: 18px;
+    }
+
+    &__gift {
+      margin-left: -48px;
+      padding: 16px 490px 14px 43px;
+      font-size: 20px;
+      border-radius: 10px;
+      box-shadow: 0 20px 51px 0 rgba(8, 8, 8, 0.34);
+
+      strong {
+        font-size: 53px;
+        padding: 17px 0;
+
+        span {
+          margin-left: -5px;
+          font-size: 40px;
+        }
+      }
+    }
+
+    &__image {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: -96px;
+      pointer-events: none;
+
+      img {
+        display: block;
+      }
+    }
+
+    &_revert {
+
+      .hero__wrap {
+        height: 686px;
+      }
+
+      .hero__image {
+        right: auto;
+        left: -64px;
+      }
+
+      .hero__wrap {
+        padding-left: 423px;
+      }
+    }
   }
 }
 @media (min-width: $desktop) {

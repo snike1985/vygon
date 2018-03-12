@@ -1,28 +1,27 @@
 .registration {
   position: relative;
-  margin-bottom: 40px;
-  background-position: top center;
+  padding: 25px;
+  margin-bottom: 25px;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
 
   &__wrap {
-    display: flex;
-    align-items: center;
-    min-height: 287px;
-    font-size: 40px;
+    font-size: 22px;
+    font-weight: 300;
     color: rgb(0, 0, 0);
     line-height: 1;
     text-align: center;
 
     p {
-      width: 50%;
-      padding: 75px;
+      padding: 10px 0;
     }
   }
 
   .btn {
     @include absoluteCenterX();
-    bottom: -20px;
+    bottom: -16px;
+    white-space: nowrap;
   }
 }
 @media (min-width: $phone-landscape) {
@@ -33,11 +32,32 @@
 @media (min-width: $tablet-portrait) {
   .registration {
 
+    &__wrap {
+      display: flex;
+      align-items: center;
+
+      p {
+        width: 50%;
+        padding: 20px;
+      }
+    }
   }
 }
 @media (min-width: $tablet-landscape) {
   .registration {
+    margin-bottom: 65px;
+    padding: 0;
 
+    &__wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 27px;
+      font-size: 40px;
+
+      p { padding: 90px 15px }
+    }
+
+    .btn { bottom: -36px }
   }
 }
 @media (min-width: $desktop) {
@@ -45,4 +65,3 @@
 
   }
 }
-

@@ -21,6 +21,10 @@
     height: 66px;
     width: 100%;
     z-index: 2;
+
+    .authorize {
+      margin-top: 30px;
+    }
   }
 
   &__content {
@@ -35,8 +39,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px;
-    font-size: 14px;
+    padding: 10px;
+    font-size: 12px;
     color: rgb(0, 0, 0);
     line-height: 1.608;
     text-align: center;
@@ -55,16 +59,65 @@
 @media (min-width: $tablet-landscape) {
   .site {
 
+    &__header {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .menu {
+        width: 100%;
+
+        &__wrap {
+          width: 100%;
+        }
+      }
+
+      .authorize {
+        height: 66px;
+        margin-top: 0;
+      }
+    }
+
+    &__footer {
+      padding: 26px;
+      font-size: 14px;
+    }
   }
 }
 @media (min-width: $desktop) {
   .site {
+
 
   }
 }
 @media (min-width: $desktop-hd) {
   .site {
 
+    &__header {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .menu {
+
+        &__wrap {
+          justify-content: center;
+          height: 66px;
+        }
+
+        &__item_phone {
+          @include absoluteCenterY();
+          right: -7px;
+          white-space: nowrap;
+        }
+      }
+
+      .authorize {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-left: 32px;
+        white-space: nowrap;
+      }
+    }
   }
 }
 

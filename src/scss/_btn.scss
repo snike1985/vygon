@@ -2,9 +2,8 @@
 a.btn,
 button.btn {
   display: inline-block;
-  min-width: 126px;
-  padding: 14px 28px;
-  font-size: 28px;
+  padding: 8px 15px;
+  font-size: 15px;
   color: rgb(255, 255, 255);
   background-color: #f15e22;
   font-weight: 700;
@@ -21,5 +20,31 @@ button.btn {
 
   &:active {
     background-color: #394e84;
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .btn {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .btn {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .btn,
+  a.btn,
+  button.btn {
+    display: inline-block;
+    min-width: 126px;
+    padding: 20px 37px;
+    font-size: 28px;
+  }
+}
+@media (min-width: $desktop) {
+  .btn {
+
   }
 }

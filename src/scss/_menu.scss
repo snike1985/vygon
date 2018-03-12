@@ -42,6 +42,7 @@
         &:after {
           box-shadow: 0 2px 6px rgba(0,0,0, 0);
           transition-delay: .001s, .3s;
+          background-color: #000;
         }
       }
     }
@@ -115,7 +116,6 @@
 
   &__item {
     display: block;
-    position: relative;
     z-index: 2;
     opacity: 0;
     font-size: 4vh;
@@ -146,27 +146,28 @@
 }
 @media (min-width: $desktop) {
   .menu {
-    position: relative;
 
     &__btn { display: none }
 
     &__wrap {
-      overflow: hidden;
+      overflow: visible;
       opacity: 1;
       visibility: visible;
       flex-direction: row;
-      position: relative;
+      justify-content: space-between;
+      position: static;
       width: auto;
       height: auto;
       padding: 0;
       transform: translate(0,0);
       background: none;
+      transition: none;
 
       &:before { display: none }
     }
 
     &__item {
-      margin-left: 22px;
+      margin: 0 11px;
       font-size: 14px;
       color: rgb(0, 0, 0);
       line-height: 1.608;
@@ -175,18 +176,14 @@
       transition: color .3s ease-in-out 0s;
 
       &:hover,
-      &.active {
-        color: rgb(10, 78, 129);
-      }
+      &.active { color: rgb(10, 78, 129) }
     }
   }
 }
 @media (min-width: $desktop-hd) {
   .menu {
 
-    &__item {
-      margin-left: 34px;
-    }
+    &__item { margin: 0 37px }
   }
 }
 /*---------- /menu ---------*/
