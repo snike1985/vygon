@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -39,16 +39,9 @@
     }
 
     &.fixed {
-      position: fixed;
       box-shadow: 0 0 20px rgba(0,0,0,.5);
-      transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
 
       .logo { opacity: 1 }
-
-      &.hide {
-        transform: translate(0, -100%);
-        transition: none;
-      }
     }
   }
 
@@ -135,10 +128,12 @@
     &__header {
       padding: 0 calc(50% - 600px);
 
+      .logo { margin: 0 60px }
+
       .menu {
 
         &__wrap {
-          justify-content: center;
+          justify-content: flex-start;
           height: 66px;
         }
 

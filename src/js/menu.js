@@ -2,6 +2,7 @@ class Menu {
 
     constructor(obj) {
         this.obj = obj;
+        this.menuWrap = this.obj.getElementsByClassName('menu__wrap')[0];
         this.items = this.obj.querySelectorAll('.menu__item');
         this.btn = this.obj.querySelectorAll('.menu__btn');
         this.scrollContainer = document.getElementsByTagName('html')[0];
@@ -16,12 +17,15 @@ class Menu {
             elem.addEventListener('click', () => {
 
                 this.obj.classList.toggle('active');
+                this.scrollContainer.classList.toggle('menu-active');
 
                 [...this.btn].forEach((elem) => {
                     elem.classList.remove('active');
                 });
 
                 elem.classList.add('active');
+
+
                 return false;
             });
 
@@ -47,7 +51,14 @@ class Menu {
             });
         });
 
-        [...this.items].forEach(elem => {
+        this.obj.addEventListener('click', () => {
+            // this.obj.classList.remove('active');
+            // this.scrollContainer.classList.remove('menu-active');
+            return false;
+        });
+        this.menuWrap.addEventListener('click', (e) => {
+            e.stopPropagation();
+            return false;
         });
     }
 }
