@@ -51,22 +51,22 @@ import $ from 'jquery';
             },
             _showMenu = function() {
                 _obj.addClass( 'active' );
-                _scrollConteiner.css( {
-                    overflowY: 'hidden',
-                    paddingRight: _getScrollWidth()
-                } );
-                _body.addClass('fixed');
+                // _scrollConteiner.css( {
+                //     overflowY: 'hidden',
+                //     paddingRight: _getScrollWidth()
+                // } );
+                // _body.addClass('fixed');
             },
             _hideMenu = function() {
                 _obj.removeClass( 'active' );
-                _wrap.css( {
-                    overflowY: 'hidden'
-                } );
-                _scrollConteiner.css( {
-                    overflowY: 'auto',
-                    paddingRight: 0
-                } );
-                _body.removeClass('fixed');
+                // _wrap.css( {
+                //     overflowY: 'hidden'
+                // } );
+                // _scrollConteiner.css( {
+                //     overflowY: 'auto',
+                //     paddingRight: 0
+                // } );
+                // _body.removeClass('fixed');
             },
             _init = function() {
                 _addEvents();

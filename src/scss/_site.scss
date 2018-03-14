@@ -6,6 +6,7 @@
   position: relative;
   min-width: 320px;
   min-height: 100vh;
+  padding-top: 66px;
   background-color: #fff;
   background-image: url(../img/site-bg.jpg);
   background-repeat: no-repeat;
@@ -17,13 +18,37 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    height: 66px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 2;
+    height: 66px;
+    z-index: 5;
+    background-color: #fff;
+    transition: box-shadow .3s ease-in-out;
 
     .authorize {
       margin-top: 30px;
+    }
+
+    .logo {
+      @include absoluteCenterY();
+      left: 20px;
+
+      img { height: 40px }
+    }
+
+    &.fixed {
+      position: fixed;
+      box-shadow: 0 0 20px rgba(0,0,0,.5);
+      transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
+
+      .logo { opacity: 1 }
+
+      &.hide {
+        transform: translate(0, -100%);
+        transition: none;
+      }
     }
   }
 
@@ -60,8 +85,6 @@
   .site {
 
     &__header {
-      max-width: 1200px;
-      margin: 0 auto;
 
       .menu {
         width: 100%;
@@ -86,15 +109,31 @@
 @media (min-width: $desktop) {
   .site {
 
+    &__header {
 
+      .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 20px;
+        opacity: 0;
+        pointer-events: none;
+        transform: none;
+        transition: opacity .3s ease-in-out;
+      }
+
+      &.fixed {
+
+        .logo { opacity: 1 }
+      }
+    }
   }
 }
 @media (min-width: $desktop-hd) {
   .site {
 
     &__header {
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 0 calc(50% - 600px);
 
       .menu {
 
